@@ -1,14 +1,23 @@
-import React from 'react';
-import { TouchableOpacityProps } from 'react-native';
+import React, { memo } from 'react';
 
-import * as S from './styles';
-
-type Props = {
-    title: string;
-} & TouchableOpacityProps
-
-export function Button({title, ...rest}: Props) {
-    return <S.Container {...rest}>
-        <S.Title>{title}</S.Title>
-    </S.Container>
+import { Container, ButtonText, Button } from './styles';
+interface Props {
+  text?: string;
+  action?: () => void;
+  color?: string;
+  colorText?: string;
 }
+
+function ButtonGlobal({ text, action, color, colorText }: Props) {
+  return (
+    <Container color={color}>
+      <Button onPress={action}>
+        <ButtonText colorText={colorText}>{text}
+        
+        </ButtonText>
+      </Button>
+    </Container>
+  );
+}
+
+export default memo(ButtonGlobal);

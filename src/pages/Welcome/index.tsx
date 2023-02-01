@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useContext } from 'react';
 
-export default function Welcome() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import AnimatedLottieView from 'lottie-react-native';
+
+
+import astronaut from '../../assets/astronaut.json';
+
+import * as S from './styles';
+import ButtonGlobal from '../../components/Button';
+import { ThemeContext } from 'styled-components';
+
+export function Welcome() {
+  const { colors } = useContext(ThemeContext);
+  
+    return <S.Container>
+      <S.title>
+        Conheça os planetas do nosso{'\n'}Sistema Solar!
+      </S.title>
+      <AnimatedLottieView style={{width: 350, marginBottom: 50}} autoPlay source={astronaut} loop />
+      <ButtonGlobal text='Vamos lá' color={colors.button_welcome} /> 
+      
+
+
+    </S.Container>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
