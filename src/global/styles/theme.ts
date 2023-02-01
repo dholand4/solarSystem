@@ -1,7 +1,11 @@
 export default {
     colors: {
-      background: '#020022',
-      text: '#FFF',     
-      button_welcome: '#160f8150',
+      background: '#f2f4f6',
+      text: '#6b48ff',    
+      primary: '#0d3f67'
     },
   };
+
+  
+
+  

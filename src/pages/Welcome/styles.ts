@@ -9,9 +9,10 @@ justify-content: center;
 background-color: ${theme.colors.background};
 `;
 
-export const title = styled.Text`
-font-size: 23px;
-font-weight: 400;
-margin-bottom: 50px;
-color: ${theme.colors.text};
+export const Title = styled.Text`
+font-size: 22px;
+font-weight: 500;
+margin-bottom: -40px;
+color: ${theme.colors.primary};
+line-height: 30px;
 `;

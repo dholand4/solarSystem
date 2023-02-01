@@ -8,18 +8,23 @@ import astronaut from '../../assets/astronaut.json';
 import * as S from './styles';
 import ButtonGlobal from '../../components/Button';
 import { ThemeContext } from 'styled-components';
+import { useNavigation } from '@react-navigation/native';
 
 export function Welcome() {
   const { colors } = useContext(ThemeContext);
+
+  const {navigate} = useNavigation();
+
+  function handleNavigation() {
+      navigate('Home')
+  }
   
     return <S.Container>
-      <S.title>
-        Conheça os planetas do nosso{'\n'}Sistema Solar!
-      </S.title>
-      <AnimatedLottieView style={{width: 350, marginBottom: 50}} autoPlay source={astronaut} loop />
-      <ButtonGlobal text='Vamos lá' color={colors.button_welcome} /> 
-      
+      <S.Title>
+        Conheça tudo sobre o nosso{'\n'}Sistema Solar!
+      </S.Title>
+      <AnimatedLottieView style={{width: 600, }} autoPlay source={astronaut} loop />
 
-
+      <ButtonGlobal text='Entrar' color={colors.primary} action={handleNavigation} /> 
     </S.Container>
 }

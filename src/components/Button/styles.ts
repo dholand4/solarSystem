@@ -16,6 +16,7 @@ export const Container = styled.View<ContainerProps>`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-top: -30px;
 `;
 
 export const Button = styled.TouchableOpacity`
@@ -29,5 +30,5 @@ export const ButtonText = styled.Text<ButtonTextProps>`
   font-size: 17px;
   font-weight: 400;
   line-height: 19px;
-  color: ${({ theme, colorText }) => colorText || theme.colors.text};
+  color: ${({ theme, colorText }) => colorText || theme.colors.background};
 `;
