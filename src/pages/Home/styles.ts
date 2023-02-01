@@ -16,5 +16,9 @@ color: ${theme.colors.text};
 `;
 
 export const List = styled.FlatList`
-    margin-bottom: 25px;
-  `;
+margin-bottom: 25px;
+`;
+
+export const ContainerSearch = styled.View`
+padding: 15px;
+`;
