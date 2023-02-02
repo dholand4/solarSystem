@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { AppRoutes } from './app.routes';
+import { GlobalRoutes } from './global.routes';
 
 export function Routes() {
     return <NavigationContainer>
-        <AppRoutes />
+        <GlobalRoutes />
     </NavigationContainer>
 
 }

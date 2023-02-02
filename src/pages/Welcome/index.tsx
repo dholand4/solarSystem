@@ -13,10 +13,10 @@ import { useNavigation } from '@react-navigation/native';
 export function Welcome() {
   const { colors } = useContext(ThemeContext);
 
-  const {navigate} = useNavigation();
+  const navigation = useNavigation();
 
   function handleNavigation() {
-      navigate('Home')
+    navigation.navigate('Home_Stack')
   }
   
     return <S.Container>

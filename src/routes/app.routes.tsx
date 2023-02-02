@@ -1,17 +1,25 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import React from 'react';
-
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { Home } from '../pages/Home';
-import {Welcome}  from '../pages/Welcome';
 
+const Tab = createBottomTabNavigator();
 
-const Stack = createNativeStackNavigator();
+export function AppRoutes(){
+    return <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: 'absolute',
+          borderTopWidth: 0,
+          bottom: 10,
+          left: 10,
+          right: 10,
+          elevation: 0,
+          borderRadius: 25,
+          height: 45,
+        },
+        tabBarHideOnKeyboard: true,
+      }}>
+        <Tab.Screen name="Home" component={Home} />
 
-export function AppRoutes() {
-    return <Stack.Navigator screenOptions={{headerShown: false}}>
-
-        <Stack.Screen name='Welcome' component={Welcome} />
-        <Stack.Screen name='Home' component={Home} />
-
-    </Stack.Navigator>
+    </Tab.Navigator>
 }
