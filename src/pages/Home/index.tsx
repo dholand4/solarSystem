@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Card from '../../components/Card';
-import CardSun from '../../components/CardSun';
 import {FlatList} from 'react-native';
 
 import planets from '../../constants/planets';
