@@ -3,8 +3,8 @@ import theme from "../../global/styles/theme";
 
 export const Container = styled.View`
 padding-top: 42px;
+flex: 1;
 align-items: center;
-justify-content: center;
 background-color: ${theme.colors.background};
 `;
 

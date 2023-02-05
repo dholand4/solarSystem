@@ -1,12 +1,14 @@
 export default {
     colors: {
-      background: '#f2f4f6',
+      white: '#FFF',
+      background: '#a9a9a9',
       text: '#a9a9a9',    
-      primary: '#0d3f67'
+      primary: '#13334c',
+      secondary: '#13334c' 
 
     },
   };
 
   
-
+  
   

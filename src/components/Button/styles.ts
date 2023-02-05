@@ -30,5 +30,5 @@ export const ButtonText = styled.Text<ButtonTextProps>`
   font-size: 17px;
   font-weight: 400;
   line-height: 19px;
-  color: ${({ theme, colorText }) => colorText || theme.colors.background};
+  color: ${({ theme, colorText }) => colorText || theme.colors.white};
 `;

@@ -11,7 +11,7 @@ background-color: ${theme.colors.background};
 
 export const Title = styled.Text`
 font-size: 22px;
-font-weight: 500;
+font-weight: bold;
 margin-bottom: -40px;
 color: ${theme.colors.primary};
 line-height: 30px;

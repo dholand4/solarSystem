@@ -8,10 +8,10 @@ import planets from '../../constants/planets';
 import * as S from './styles';
 import { useNavigation } from '@react-navigation/native';
 
+
 export function Home() {
 
 const navigation = useNavigation();
-
 
 function handleNavigation(planetsId: string) {
   navigation.navigate('About', {
@@ -19,20 +19,20 @@ function handleNavigation(planetsId: string) {
   });
 }
 
-    return <S.Container>
-    <FlatList
-    
-    data={planets}
-    keyExtractor={item => item.id.toString()}
-    numColumns={2}
-    showsVerticalScrollIndicator={false}
-    renderItem={({ item: planets}) => 
-    <Card Image={planets.image} text={planets.title} action={() => {
-      handleNavigation(planets.id);
-    }}/>
-  }
-    >
-    </FlatList>
+return <S.Container>
+<FlatList
 
-    </S.Container>
+data={planets}
+keyExtractor={item => item.id.toString()}
+numColumns={2}
+showsVerticalScrollIndicator={false}
+renderItem={({ item: planets}) => 
+<Card Image={planets.image} text={planets.title} action={() => {
+  handleNavigation(planets.id);
+}}/>
+}
+>
+</FlatList>
+
+</S.Container>
 }

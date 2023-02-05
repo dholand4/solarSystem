@@ -21,6 +21,6 @@ margin-bottom: 15px;
 export const title = styled.Text`
 font-size: 18px;
 font-weight: 400;
-color: ${theme.colors.background};
+color: ${theme.colors.white};
 `;
 
