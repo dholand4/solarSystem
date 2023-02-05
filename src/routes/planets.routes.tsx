@@ -1,17 +1,17 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 
-import {AppRoutes} from './app.routes';
-import {Welcome}  from '../pages/Welcome';
 import About from '../pages/About';
+import { Home } from '../pages/Home';
 
 
 const Stack = createNativeStackNavigator();
 
-export function GlobalRoutes() {
+export function PlanetsRoutes() {
     return <Stack.Navigator screenOptions={{headerShown: false}}>
 
-        <Stack.Screen name='Welcome' component={Welcome} />
-        <Stack.Screen name='Home_Stack' component={AppRoutes} />
+        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name='About' component={About} />
+
     </Stack.Navigator>
 }

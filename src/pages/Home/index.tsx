@@ -6,18 +6,33 @@ import {FlatList} from 'react-native';
 import planets from '../../constants/planets';
 
 import * as S from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
 
+const navigation = useNavigation();
+
+
+function handleNavigation(planetsId: string) {
+  navigation.navigate('About', {
+    planetsId,
+  });
+}
+
     return <S.Container>
     <FlatList
+    
     data={planets}
-    renderItem={({ item }) => <Card Image={item.image} text={item.title} />}
-    keyExtractor={item => item.id}
+    keyExtractor={item => item.id.toString()}
     numColumns={2}
-    showsVerticalScrollIndicator={false} >
+    showsVerticalScrollIndicator={false}
+    renderItem={({ item: planets}) => 
+    <Card Image={planets.image} text={planets.title} action={() => {
+      handleNavigation(planets.id);
+    }}/>
+  }
+    >
     </FlatList>
-
 
     </S.Container>
 }

@@ -8,6 +8,7 @@ import { Home } from '../pages/Home';
 import Curiosities from '../pages/Curiosities';
 import Quiz from '../pages/Quiz';
 import Settings from '../pages/Settings';
+import { PlanetsRoutes } from './planets.routes';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ export function AppRoutes(){
       tabBarActiveTintColor: colors.background,
       tabBarInactiveTintColor: colors.text,
     }}>
-<Tab.Screen name="Planetas" component={Home} 
+<Tab.Screen name="Planetas" component={PlanetsRoutes} 
         options={{
           tabBarIcon: ({focused}) =>
           <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.background : colors.text} size={28} />
