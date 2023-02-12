@@ -1,66 +1,57 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ThemeContext } from 'styled-components';
-
+import About from '../pages/About';
+import Curiosities from '../pages/Curiosities';
+import { Home } from '../pages/Home';
+import Settings from '../pages/Settings';
 import {Ionicons} from '@expo/vector-icons';
 
-import Curiosities from '../pages/Curiosities';
-import Settings from '../pages/Settings';
-import { PlanetsRoutes } from './planets.routes';
+const Drawer = createDrawerNavigator();
+const Stack = createNativeStackNavigator();
 
-const Tab = createBottomTabNavigator();
-
-export function AppRoutes(){
-  
+function DrawerNavigation() {
   const { colors } = useContext(ThemeContext);
-  
-    return<Tab.Navigator
-    initialRouteName='Planetas'
-    
+  return (
+    <Drawer.Navigator
     screenOptions={{
-      headerShown: false,
-      tabBarStyle: {
-        position: 'absolute',
-        backgroundColor: colors.primary,
-        borderTopWidth: 0,
-        bottom: 8,
-        left: 21,
-        right: 21,
-        elevation: 0,
-        borderRadius: 15,
-        height: 56,
-
-        paddingTop: 5,
-        paddingBottom: 5,
-        paddingLeft: 5,
-        paddingRight: 5,
+      headerTintColor: colors.primary,
+      drawerActiveTintColor: colors.white,
+      headerStyle: {
+        backgroundColor: colors.background,
       },
-      tabBarActiveTintColor: colors.white,
-      tabBarInactiveTintColor: colors.text,
+      drawerStyle: {
+        backgroundColor: colors.primary,
+      },
+      drawerInactiveTintColor: colors.text
     }}
     >
+      <Drawer.Screen name="Planetas" component={Home} 
+      options={{
+        drawerIcon: ({focused}) =>
+        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
+      }}/>
 
-
-<Tab.Screen name="Curiosidades" component={Curiosities}
-        options={{
-          tabBarIcon: ({focused}) =>
-          <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.white : colors.text} size={26} />
-        }}
-        />
-
-        <Tab.Screen name="Planetas" component={PlanetsRoutes} 
-        options={{
-          tabBarIcon: ({focused}) =>
-          <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
-        }}
-        />
-
-<Tab.Screen name="Configurações" component={Settings} 
-        options={{
-          tabBarIcon: ({focused}) =>
-          <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.white : colors.text} size={26} />
-        }}
-        />
-
-    </Tab.Navigator>
+      <Drawer.Screen name="Curiosidades" component={Curiosities} 
+      options={{
+        drawerIcon: ({focused}) =>
+        <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.white : colors.text} size={26} />
+      }} />
+      <Drawer.Screen name="Configurações" component={Settings}
+              options={{
+                drawerIcon: ({focused}) =>
+                <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.white : colors.text} size={26} />
+              }}
+              />
+    </Drawer.Navigator>
+  ) 
+}
+export function AppRoutes(){
+    return (
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Screen name='Home' component={DrawerNavigation} />
+    <Stack.Screen name='About' component={About} />
+    </Stack.Navigator>
+);
 }
