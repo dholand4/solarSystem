@@ -4,9 +4,7 @@ import { ThemeContext } from 'styled-components';
 
 import {Ionicons} from '@expo/vector-icons';
 
-import { Home } from '../pages/Home';
 import Curiosities from '../pages/Curiosities';
-import Quiz from '../pages/Quiz';
 import Settings from '../pages/Settings';
 import { PlanetsRoutes } from './planets.routes';
 
@@ -41,12 +39,7 @@ export function AppRoutes(){
       tabBarInactiveTintColor: colors.text,
     }}
     >
-<Tab.Screen name="Planetas" component={PlanetsRoutes} 
-        options={{
-          tabBarIcon: ({focused}) =>
-          <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
-        }}
-        />
+
 
 <Tab.Screen name="Curiosidades" component={Curiosities}
         options={{
@@ -55,11 +48,12 @@ export function AppRoutes(){
         }}
         />
 
-<Tab.Screen name="Quiz" component={Quiz}         
+        <Tab.Screen name="Planetas" component={PlanetsRoutes} 
         options={{
           tabBarIcon: ({focused}) =>
-          <Ionicons name={focused ? 'ios-game-controller' : 'ios-game-controller-outline'} color={focused ? colors.white : colors.text} size={28} />
-        }} />
+          <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
+        }}
+        />
 
 <Tab.Screen name="Configurações" component={Settings} 
         options={{

@@ -5,7 +5,3 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.background};
 `;
 
-export const ContainerText = styled.Text`
-  color: ${({theme}) => theme.colors.text};
-  font-size: 50px;
-`
