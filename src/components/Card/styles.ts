@@ -3,24 +3,42 @@ import theme from '../../global/styles/theme';
 
 export const CardPlanet = styled.TouchableOpacity`
 height: 190px;
-width: 180px;
-background-color: ${theme.colors.primary};
-border: 0.5px;
-align-items: center;
-justify-content: center;
-border-radius: 15px;
+width: 390px;
 margin: 5px;
+background-color: ${theme.colors.secondary};
+border-radius: 17px;
+justify-content: center;
+border: 5px;
 `;
 
 export const Image = styled.Image`
-height: 120px;
-width: 120px;
-margin-bottom: 15px;
+height: 125px;
+width: 125px;
 `;
 
 export const title = styled.Text`
-font-size: 18px;
+font-size: 28px;
+font-weight: 400;
+
+color: ${theme.colors.white};
+left: 35px;
+`;
+export const TextId = styled.Text`
+font-size: 15px;
 font-weight: 400;
 color: ${theme.colors.white};
+left: 35px;
 `;
 
+export const Planet = styled.View`
+position: absolute;
+align-items: center;
+right: 28px;
+`;
+
+export const BackImage = styled.Image`
+height: 180px;
+width: 380px;
+position: absolute;
+
+`;

@@ -3,16 +3,13 @@ import theme from '../../global/styles/theme';
 
 export const Header = styled.View`
 height: 340px;
-padding: 20px;
-background-color: ${theme.colors.primary};
-align-items: flex-end;
-justify-content: center;
-
+width: 100%;
 `;
 
 export const Card = styled.View`
+position: absolute;
 align-items: center;
-padding: 10px;
+right: 18px;
 `;
 
 export const Image = styled.Image`
@@ -29,6 +26,6 @@ color: ${theme.colors.white};
 
 export const Back = styled.TouchableOpacity`
 position: absolute;
-top: 70px;
+top: 80px;
 left: 40px;
 `;

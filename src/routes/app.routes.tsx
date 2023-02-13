@@ -16,32 +16,34 @@ function DrawerNavigation() {
   return (
     <Drawer.Navigator
     screenOptions={{
-      headerTintColor: colors.primary,
-      drawerActiveTintColor: colors.white,
+      headerTintColor: colors.secondary,
+      headerTitleAlign: "center",
+      drawerActiveTintColor: colors.primary,
       headerStyle: {
         backgroundColor: colors.background,
+        borderBottomWidth: 0,
       },
       drawerStyle: {
-        backgroundColor: colors.primary,
+        backgroundColor: colors.background,
       },
-      drawerInactiveTintColor: colors.text
+      drawerInactiveTintColor: colors.text,
     }}
     >
       <Drawer.Screen name="Planetas" component={Home} 
       options={{
         drawerIcon: ({focused}) =>
-        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
+        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.primary : colors.text} size={28} />
       }}/>
 
       <Drawer.Screen name="Curiosidades" component={Curiosities} 
       options={{
         drawerIcon: ({focused}) =>
-        <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.white : colors.text} size={26} />
+        <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.primary : colors.text} size={26} />
       }} />
       <Drawer.Screen name="Configurações" component={Settings}
               options={{
                 drawerIcon: ({focused}) =>
-                <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.white : colors.text} size={26} />
+                <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.primary : colors.text} size={26} />
               }}
               />
     </Drawer.Navigator>

@@ -13,10 +13,14 @@ function About() {
   const {planetsId} = route.params;
   const item = planets.filter(i => i.id === planetsId)[0];
 
+  function handleGoBack(){
+    navigation.goBack();
+  }
+
   return (
     <Styles.Container>
     <StatusBar backgroundColor="transparent" style="light" />
-    <Header key={item.id} Image={item.image} text={item.title} >
+    <Header key={item.id} Image={item.image} text={item.title} action={handleGoBack} >
       
     </Header>
 
