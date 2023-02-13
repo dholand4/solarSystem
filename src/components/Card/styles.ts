@@ -6,9 +6,9 @@ height: 190px;
 width: 390px;
 margin: 5px;
 background-color: ${theme.colors.secondary};
-border-radius: 17px;
+border-radius: 10px;
 justify-content: center;
-border: 5px;
+border: 3px;
 `;
 
 export const Image = styled.Image`
@@ -37,8 +37,8 @@ right: 28px;
 `;
 
 export const BackImage = styled.Image`
-height: 180px;
-width: 380px;
+height: 184px;
+width: 384px;
 position: absolute;
 
 `;
