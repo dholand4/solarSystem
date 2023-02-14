@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import AnimatedLottieView from 'lottie-react-native';
 
 
-import astronaut from '../../assets/astronaut.json';
+import astronaut from '../../assets/gifs/astronaut.json';
 
 import * as S from './styles';
 import ButtonGlobal from '../../components/Button';
