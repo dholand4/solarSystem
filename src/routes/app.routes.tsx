@@ -21,9 +21,9 @@ function DrawerNavigation() {
   return (
     <Drawer.Navigator
     screenOptions={{
-      headerTintColor: colors.secondary,
+      headerTintColor: colors.white,
       headerTitleAlign: "center",
-      drawerActiveTintColor: colors.primary,
+      drawerActiveTintColor: colors.white,
       headerStyle: {
         backgroundColor: colors.background,
         borderBottomWidth: 0,
@@ -38,8 +38,10 @@ function DrawerNavigation() {
       options={{
         title:'Sistema Solar',
         drawerLabel: 'Sistema Solar',
+
+        
         drawerIcon: ({focused}) =>
-        <MaterialCommunityIcons name={focused ? 'sun-wireless' : 'sun-wireless-outline'} color={focused ? colors.primary : colors.text} size={28} />
+        <MaterialCommunityIcons name={focused ? 'sun-wireless' : 'sun-wireless-outline'} color={focused ? colors.white : colors.text} size={28} />
       }}/>
 
       <Drawer.Screen name="Planets" component={Planets} 
@@ -47,7 +49,7 @@ function DrawerNavigation() {
         title:'Planetas',
         drawerLabel: 'Planetas',
         drawerIcon: ({focused}) =>
-        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.primary : colors.text} size={28} />
+        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
         
       }} />
       <Drawer.Screen name="Stars" component={Stars}
@@ -55,23 +57,30 @@ function DrawerNavigation() {
                 title:'Astros',
                 drawerLabel: 'Astros',
                 drawerIcon: ({focused}) =>
-                <MaterialCommunityIcons name={focused ? 'star-shooting' : 'star-shooting-outline'} color={focused ? colors.primary : colors.text} size={26} />
+                <MaterialCommunityIcons name={focused ? 'star-shooting' : 'star-shooting-outline'} color={focused ? colors.white : colors.text} size={26} />
               }}
               />
                     <Drawer.Screen name="Others" component={Others}
               options={{
+
                 title:'Outros',
                 drawerLabel: 'Outros',
                 drawerIcon: ({focused}) =>
-                <Octicons name={focused ? 'telescope-fill' : 'telescope'} color={focused ? colors.primary : colors.text} size={26} />
+                <Octicons name={focused ? 'telescope-fill' : 'telescope'} color={focused ? colors.white : colors.text} size={26} />
               }}
               />
                     <Drawer.Screen name="Curiosities" component={Curiosities}
+                    
               options={{
+      headerTintColor: colors.white,
+
+                headerStyle:{
+                  backgroundColor: colors.background,
+                },
                 title:'Curiosidades',
                 drawerLabel: 'Curiosidades',
                 drawerIcon: ({focused}) =>
-                <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.primary : colors.text} size={26} />
+                <Ionicons name={focused ? 'ios-rocket' : 'ios-rocket-outline'} color={focused ? colors.white : colors.text} size={26} />
               }}
               />
 
@@ -80,7 +89,7 @@ function DrawerNavigation() {
                 title:'Configurações',
                 drawerLabel: 'Configurações',
                 drawerIcon: ({focused}) =>
-                <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.primary : colors.text} size={26} />
+                <Ionicons name={focused ? 'ios-settings' : 'ios-settings-outline'} color={focused ? colors.white : colors.text} size={26} />
               }}
               />
     </Drawer.Navigator>

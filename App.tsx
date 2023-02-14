@@ -7,7 +7,7 @@ import { Routes } from "./src/routes";
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-       <StatusBar backgroundColor="transparent" style="dark" />
+       <StatusBar backgroundColor="#0f0f0f" style="light" />
       <Routes />
     </ThemeProvider>
   );
