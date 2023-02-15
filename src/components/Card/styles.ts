@@ -1,44 +1,82 @@
 import styled from 'styled-components/native';
 import theme from '../../global/styles/theme';
 
-export const CardPlanet = styled.TouchableOpacity`
-height: 190px;
-width: 390px;
-margin: 5px;
-background-color: ${theme.colors.secondary};
-border-radius: 10px;
-justify-content: center;
-border: 3px;
+export const Container = styled.View`
+flex: 1;
 `;
+
+export const CardPlanet = styled.View`
+height: 50%;
+width: 100%;
+justify-content: center;
+align-items: center;
+`;
+
+export const CardInfos = styled.View`
+height: 45%;
+width: 100%;
+padding: 20px;
+border-radius: 20px;
+background-color: ${theme.colors.secondarytrans};
+justify-content: center;
+;
+`
+
+export const ContainerTitle = styled.View`
+flex-direction: row;
+padding: 5px;
+margin-bottom: 10px;
+`;
+
+export const Title = styled.Text`
+font-size: 19px;
+color: ${theme.colors.white};
+`;
+
+export const Id = styled.Text`
+font-size: 19px;
+color: ${theme.colors.white};
+`;
+
 
 export const Image = styled.Image`
-height: 125px;
-width: 125px;
+width: 350px;
+height: 350px;
 `;
 
-export const title = styled.Text`
-font-size: 28px;
-font-weight: 400;
-
-color: ${theme.colors.white};
-left: 35px;
-`;
-export const TextId = styled.Text`
+export const Infos = styled.Text`
 font-size: 15px;
-font-weight: 400;
+color: ${theme.colors.primary};
+`;
+
+export const Answers = styled.Text`
+font-size: 15px;
 color: ${theme.colors.white};
-left: 35px;
+
 `;
 
-export const Planet = styled.View`
-position: absolute;
+export const InfosPlanets = styled.View`
+padding: 10px;
+flex-direction: row;
+justify-content: space-between;
 align-items: center;
-right: 28px;
 `;
 
-export const BackImage = styled.Image`
-height: 184px;
-width: 384px;
-position: absolute;
-
+export const Order = styled.Text`
+font-size: 13px;
+color: ${theme.colors.primary};
+margin-bottom: 5px;
 `;
+export const ContainerOrder = styled.View`
+align-items: center;
+margin-top: -15px;
+`;
+
+
+export const InfosCards = styled.View`
+margin-bottom: 40px;
+`;
+
+export const InfoPlanetLeft = styled.View``;
+
+export const InfoPlanetRight = styled.View``;
