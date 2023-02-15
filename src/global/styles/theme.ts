@@ -5,6 +5,7 @@ export default {
       text: '#545151',    
       primary: '#a39e9e',
       secondary: '#2d2d2d' ,
+      secondarytrans: '#2d2d2d70',
       backgrounDrawer: '#848181',
       black: '#000',
 

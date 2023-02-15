@@ -3,16 +3,37 @@ import theme from "../../global/styles/theme";
 
 export const Container = styled.View`
 flex: 1;
-padding: 20px;
+`;
+
+export const Content = styled.View`
+flex: 1;
 align-items: center;
 justify-content: center;
-background-color: ${theme.colors.background};
+`;
+
+export const Background = styled.ImageBackground`
+flex: 1;
 `;
 
 export const Title = styled.Text`
-font-size: 22px;
-font-weight: bold;
-margin-bottom: -40px;
-color: ${theme.colors.primary};
-line-height: 30px;
+font-size: 17px;
+color: ${theme.colors.white};
+`;
+export const SubTitle = styled.Text`
+font-size: 26px;
+color: ${theme.colors.white};
+
+`;
+
+export const ContainerTitle = styled.View`
+align-items: flex-end;
+position: absolute;
+top: 70px;
+right: 30px;
+`;
+
+export const BackButton = styled.TouchableOpacity`
+position: absolute;
+bottom: 70px;
+right: 30px;
 `;

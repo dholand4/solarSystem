@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import { AccordionBody } from '../../components/Accordion/AccordionBody';
 import { AccordionItem } from '../../components/Accordion/AccordionItem';
-import { StatusBar } from "expo-status-bar";
 
 import { curiosities } from '../../constants/curiosities';
-import background from '../../assets/background.png';
+import background from '../../assets/backgrounds/curiosities.png';
 
 
 

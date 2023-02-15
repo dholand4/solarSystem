@@ -19,6 +19,8 @@ export const Content = styled.ScrollView`
   margin-top: 10px;
 `;
 
+
 export const Background = styled.ImageBackground`
 flex: 1;
 `;
+
