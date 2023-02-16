@@ -22,12 +22,10 @@ export interface PlanetInfo {
 }
 
 function Planets() {
-  const [planets, setPlanets] = useState({} as PlanetInfo);
+  const [planets, setPlanets] = useState<Record<string, PlanetInfo>>({});
 
   useEffect(() => {
-    const planetId = "earth";
-
-    async function getPokemonDetail() {
+    async function getPlanetDetails(planetId: string) {
       try {
         const response = await api.get(`/bodies/${planetId}`);
         const {
@@ -40,21 +38,26 @@ function Planets() {
           sideralRotation,
         } = response.data;
 
-        setPlanets({
-          moons,
-          density,
-          gravity,
-          mass,
-          sideralOrbit,
-          englishName,
-          sideralRotation,
-        });
+        setPlanets((prevPlanets) => ({
+          ...prevPlanets,
+          [planetId]: {
+            moons,
+            density,
+            gravity,
+            mass,
+            sideralOrbit,
+            englishName,
+            sideralRotation,
+          },
+        }));
       } catch (error) {
         console.log("DEU ERRO CHAPA");
       }
     }
 
-    getPokemonDetail();
+    MOCK.forEach((planet) => {
+      getPlanetDetails(planet.name);
+    });
   }, []);
 
   return (
@@ -65,17 +68,17 @@ function Planets() {
         ListFooterComponent={<View style={{ marginRight: 21 }} />}
         data={MOCK}
         keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item: MOCK }) => (
+        renderItem={({ item: mock }) => (
           <Card
-            id={MOCK.id}
-            name={MOCK.nameBr}
-            gravity={planets.gravity}
-            density={planets.density}
-            sideralOrbit={planets.sideralOrbit}
-            sideralRotation={planets.sideralRotation}
-            mass={planets.mass?.massValue ?? 0}
-            moons={planets.moons?.length || 0}
-            image={MOCK.image}
+            id={mock.id}
+            name={mock.nameBr}
+            gravity={planets[mock.name]?.gravity}
+            density={planets[mock.name]?.density}
+            sideralOrbit={planets[mock.name]?.sideralOrbit}
+            sideralRotation={planets[mock.name]?.sideralRotation}
+            mass={planets[mock.name]?.mass?.massValue ?? 0}
+            moons={planets[mock.name]?.moons?.length || 0}
+            image={mock.image}
           />
         )}
       ></FlatList>

@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
+import React, { memo } from "react";
 
-import { Container, ButtonText, Button } from './styles';
+import { Container, ButtonText, Button } from "./styles";
 interface Props {
   text?: string;
   action?: () => void;
@@ -12,9 +12,7 @@ function ButtonGlobal({ text, action, color, colorText }: Props) {
   return (
     <Container color={color}>
       <Button onPress={action}>
-        <ButtonText colorText={colorText}>{text}
-        
-        </ButtonText>
+        <ButtonText colorText={colorText}>{text}</ButtonText>
       </Button>
     </Container>
   );

@@ -8,16 +8,16 @@ export const Container = styled.View`
 export const Search = styled.TextInput`
   ${({ theme }) => css`
     font-size: 16px;
-    font-weight: 400;    
+    font-weight: 400;
   `}
-  `;
+`;
 
 export const ContainerSearch = styled.View`
-width: 370px;
-flex-direction: row;
-padding: 20px 25px 20px 25px;
-border-radius: 15px;
-border-width: 1px;
-justify-content: space-between;
-align-items: center;
+  width: 370px;
+  flex-direction: row;
+  padding: 20px 25px 20px 25px;
+  border-radius: 15px;
+  border-width: 1px;
+  justify-content: space-between;
+  align-items: center;
 `;

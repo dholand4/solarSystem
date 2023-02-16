@@ -11,8 +11,8 @@ export default [
   {
     id: "1",
     nameBr: "Mercúrio",
-    image: mercury,
     name: "mercury,",
+    image: mercury,
   },
   {
     id: "2",

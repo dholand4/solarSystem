@@ -3,11 +3,10 @@ import theme from "./src/global/styles/theme";
 import { StatusBar } from "expo-status-bar";
 import { Routes } from "./src/routes";
 
-
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-       <StatusBar backgroundColor="transparent" style="light" />
+      <StatusBar backgroundColor="transparent" style="light" />
       <Routes />
     </ThemeProvider>
   );
