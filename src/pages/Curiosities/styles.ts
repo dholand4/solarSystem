@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import theme from '../../global/styles/theme';
+import styled from "styled-components/native";
+import theme from "../../global/styles/theme";
 
 export const SubTitle = styled.Text`
   font-size: 14px;
@@ -19,8 +19,6 @@ export const Content = styled.ScrollView`
   margin-top: 10px;
 `;
 
-
 export const Background = styled.ImageBackground`
-flex: 1;
+  flex: 1;
 `;
-

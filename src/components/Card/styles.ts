@@ -3,6 +3,10 @@ import theme from '../../global/styles/theme';
 
 export const Container = styled.View`
 flex: 1;
+align-items: center;
+justify-content: center;
+margin-left: 26px;
+margin-right: 5px;
 `;
 
 export const CardPlanet = styled.View`
@@ -40,8 +44,8 @@ color: ${theme.colors.white};
 
 
 export const Image = styled.Image`
-width: 350px;
-height: 350px;
+width: 325px;
+height: 325px;
 `;
 
 export const Infos = styled.Text`
@@ -63,7 +67,7 @@ align-items: center;
 `;
 
 export const Order = styled.Text`
-font-size: 13px;
+font-size: 14px;
 color: ${theme.colors.primary};
 margin-bottom: 5px;
 `;

@@ -29,4 +29,3 @@ export const ContentIconAccordion = styled(Animated.View)``;
 export const ContentIconService = styled.View`
   margin-right: 15px;
 `;
-

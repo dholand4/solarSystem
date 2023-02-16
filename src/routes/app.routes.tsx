@@ -21,6 +21,7 @@ function DrawerNavigation() {
   return (
     <Drawer.Navigator
     screenOptions={{
+
       headerTintColor: colors.white,
       headerTitleAlign: "center",
       drawerActiveTintColor: colors.white,
@@ -34,6 +35,15 @@ function DrawerNavigation() {
       drawerInactiveTintColor: colors.text,
     }}
     >
+            <Drawer.Screen name="Planets" component={Planets} 
+      options={{
+        title:'Planetas',
+        drawerLabel: 'Planetas',
+        drawerIcon: ({focused}) =>
+        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
+        
+      }} />
+  
       <Drawer.Screen name="SolarSystem" component={SolarSystem} 
       options={{
         title:'Sistema Solar',
@@ -44,14 +54,14 @@ function DrawerNavigation() {
         <MaterialCommunityIcons name={focused ? 'sun-wireless' : 'sun-wireless-outline'} color={focused ? colors.white : colors.text} size={28} />
       }}/>
 
-      <Drawer.Screen name="Planets" component={Planets} 
+      {/* <Drawer.Screen name="Planets" component={Planets} 
       options={{
         title:'Planetas',
         drawerLabel: 'Planetas',
         drawerIcon: ({focused}) =>
         <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
         
-      }} />
+      }} /> */}
       <Drawer.Screen name="Stars" component={Stars}
               options={{
                 title:'Astros',
