@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "solarSystem",
-    "slug": "solarSystem",
+    "slug": "solarsystem",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,10 +24,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.dholand4.solarsystem"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "563fb5a6-92c8-45f2-a07a-46d176db796b"
+      }
+    },
+    "owner": "dholand4"
   }
 }
