@@ -57,7 +57,7 @@ function Planets() {
       } finally {
         setTimeout(() => {
           setLoad(false);
-        }, 1000);
+        }, 1500);
       }
     }
 
@@ -76,7 +76,7 @@ function Planets() {
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
-          ListFooterComponent={<View style={{ marginRight: 21 }} />}
+          ListFooterComponent={<View style={{ marginRight: 23 }} />}
           data={MOCK}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item: mock }) => (
