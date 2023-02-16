@@ -11,51 +11,51 @@ export default [
   {
     id: "1",
     nameBr: "Mercúrio",
-    name: "mercury,",
+    name: "Mercury",
     image: mercury,
   },
   {
     id: "2",
     nameBr: "Vênus",
-    name: "venus",
+    name: "Venus",
     image: venus,
   },
   {
     id: "3",
     nameBr: "Terra",
-    name: "earth",
+    name: "Earth",
     image: earth,
   },
   {
     id: "4",
     nameBr: "Marte",
-    name: "mars",
+    name: "Mars",
     image: mars,
   },
   {
     id: "5",
     nameBr: "Júpiter",
-    name: "jupiter",
+    name: "Jupiter",
     image: jupiter,
   },
   {
     id: "6",
     nameBr: "Saturno",
-    name: "saturn",
+    name: "Saturn",
     image: saturn,
   },
 
   {
     id: "7",
     nameBr: "Urano",
-    name: "uranus",
+    name: "Uranus",
     image: uranus,
   },
 
   {
     id: "8",
     nameBr: "Netuno",
-    name: "neptune",
+    name: "Neptune",
     image: neptune,
   },
 ];
