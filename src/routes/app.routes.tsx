@@ -5,10 +5,8 @@ import { ThemeContext } from "styled-components";
 
 import SolarSystem from "../pages/SolarSystem";
 import Planets from "../pages/Planets";
-import Stars from "../pages/Stars";
-import Others from "../pages/Others";
 import Curiosities from "../pages/Curiosities";
-import Settings from "../pages/Settings";
+import Reference from "../pages/References";
 
 import { Ionicons, MaterialCommunityIcons, Octicons } from "@expo/vector-icons";
 
@@ -34,22 +32,6 @@ function DrawerNavigation() {
       }}
     >
       <Drawer.Screen
-        name="Planets"
-        component={Planets}
-        options={{
-          title: "Planetas",
-          drawerLabel: "Planetas",
-          drawerIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? "earth" : "earth-outline"}
-              color={focused ? colors.white : colors.text}
-              size={28}
-            />
-          ),
-        }}
-      />
-
-      <Drawer.Screen
         name="SolarSystem"
         component={SolarSystem}
         options={{
@@ -60,44 +42,21 @@ function DrawerNavigation() {
             <MaterialCommunityIcons
               name={focused ? "sun-wireless" : "sun-wireless-outline"}
               color={focused ? colors.white : colors.text}
-              size={28}
+              size={29}
             />
           ),
         }}
       />
 
-      {/* <Drawer.Screen name="Planets" component={Planets} 
-      options={{
-        title:'Planetas',
-        drawerLabel: 'Planetas',
-        drawerIcon: ({focused}) =>
-        <Ionicons name={focused ? 'earth' : 'earth-outline'} color={focused ? colors.white : colors.text} size={28} />
-        
-      }} /> */}
       <Drawer.Screen
-        name="Stars"
-        component={Stars}
+        name="Planets"
+        component={Planets}
         options={{
-          title: "Astros",
-          drawerLabel: "Astros",
+          title: "Planetas",
+          drawerLabel: "Planetas",
           drawerIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={focused ? "star-shooting" : "star-shooting-outline"}
-              color={focused ? colors.white : colors.text}
-              size={26}
-            />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Others"
-        component={Others}
-        options={{
-          title: "Outros",
-          drawerLabel: "Outros",
-          drawerIcon: ({ focused }) => (
-            <Octicons
-              name={focused ? "telescope-fill" : "telescope"}
+            <Ionicons
+              name={focused ? "earth" : "earth-outline"}
               color={focused ? colors.white : colors.text}
               size={26}
             />
@@ -118,22 +77,6 @@ function DrawerNavigation() {
           drawerIcon: ({ focused }) => (
             <Ionicons
               name={focused ? "ios-rocket" : "ios-rocket-outline"}
-              color={focused ? colors.white : colors.text}
-              size={26}
-            />
-          ),
-        }}
-      />
-
-      <Drawer.Screen
-        name="Settings"
-        component={Settings}
-        options={{
-          title: "Configurações",
-          drawerLabel: "Configurações",
-          drawerIcon: ({ focused }) => (
-            <Ionicons
-              name={focused ? "ios-settings" : "ios-settings-outline"}
               color={focused ? colors.white : colors.text}
               size={26}
             />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { View } from "react-native";
+import { Dimensions, View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
-import Card from "../../components/Card";
+import Card from "../../components/CardPlanets";
 import { Load } from "../../components/Load";
 
 import MOCK from "../../constants/planets";
@@ -9,6 +9,8 @@ import MOCK from "../../constants/planets";
 import api from "../../service/api";
 
 import * as Styles from "./styles";
+
+const { width } = Dimensions.get("window");
 
 export interface PlanetInfo {
   moons: { moon: string }[] | null;
@@ -75,8 +77,8 @@ function Planets() {
       <Styles.Container>
         <FlatList
           horizontal
+          pagingEnabled
           showsHorizontalScrollIndicator={false}
-          ListFooterComponent={<View style={{ marginRight: 23 }} />}
           data={MOCK}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item: mock }) => (

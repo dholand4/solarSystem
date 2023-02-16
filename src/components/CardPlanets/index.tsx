@@ -14,7 +14,7 @@ interface Planets {
 
   image: string;
 }
-function Card({
+function CardPlanets({
   id,
   name,
   gravity,
@@ -79,4 +79,4 @@ function Card({
   );
 }
 
-export default memo(Card);
+export default memo(CardPlanets);

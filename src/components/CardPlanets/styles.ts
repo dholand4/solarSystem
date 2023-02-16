@@ -1,26 +1,26 @@
+import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 import theme from "../../global/styles/theme";
 
+const { width } = Dimensions.get("window");
 export const Container = styled.View`
-  flex: 1;
-  align-items: center;
-
-  margin-left: 27px;
-  margin-right: 5px;
+  height: ${width / -5}px;
+  width: ${width * 1}px;
+  border-radius: 25px;
 `;
 
 export const CardPlanet = styled.View`
-  height: 50%;
+  height: 53%;
   width: 100%;
   justify-content: center;
   align-items: center;
 `;
 
 export const CardInfos = styled.View`
-  height: 45%;
+  height: 50%;
   width: 100%;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: ${theme.colors.secondarytrans};
   justify-content: center; ;
 `;
@@ -29,10 +29,12 @@ export const ContainerTitle = styled.View`
   flex-direction: row;
   padding: 5px;
   margin-bottom: 10px;
+  margin-top: -30px;
 `;
 
 export const Title = styled.Text`
   font-size: 19px;
+
   color: ${theme.colors.white};
 `;
 
