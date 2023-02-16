@@ -1,6 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Dimensions, View } from "react-native";
+import { View } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import Card from "../../components/Card";
 
@@ -11,7 +10,7 @@ import api from "../../service/api";
 import * as Styles from "./styles";
 
 export interface PlanetInfo {
-  moons: { moon: number }[] | null;
+  moons: { moon: string }[] | null;
   density: number;
   gravity: number;
   mass: {
@@ -26,7 +25,6 @@ function Planets() {
   const [planets, setPlanets] = useState({} as PlanetInfo);
 
   useEffect(() => {
-
     const planetId = "earth";
 
     async function getPokemonDetail() {
@@ -59,14 +57,11 @@ function Planets() {
     getPokemonDetail();
   }, []);
 
-
   return (
     <Styles.Container>
       <FlatList
-        horizontal={true}
-        style={{ flex: 1 }}
+        horizontal
         showsHorizontalScrollIndicator={false}
-
         ListFooterComponent={<View style={{ marginRight: 21 }} />}
         data={MOCK}
         keyExtractor={(item, index) => index.toString()}
@@ -74,18 +69,16 @@ function Planets() {
           <Card
             id={MOCK.id}
             name={MOCK.nameBr}
-            gravity={planets?.gravity}
-            density={planets?.density}
-            sideralOrbit={planets?.sideralOrbit}
-            sideralRotation={planets?.sideralRotation}
-            mass={planets.mass.massValue}
-            moons={planets?.moons?.length || 0}
+            gravity={planets.gravity}
+            density={planets.density}
+            sideralOrbit={planets.sideralOrbit}
+            sideralRotation={planets.sideralRotation}
+            mass={planets.mass?.massValue ?? 0}
+            moons={planets.moons?.length || 0}
             image={MOCK.image}
           />
         )}
       ></FlatList>
-
-
     </Styles.Container>
   );
 }

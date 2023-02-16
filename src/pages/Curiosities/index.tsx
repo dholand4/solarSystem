@@ -14,13 +14,9 @@ function Curiosities() {
       <Styles.Background source={background}>
         <Styles.Content showsVerticalScrollIndicator={false}>
           {curiosities.map((current, index) => (
-            <AccordionItem
-              title={current.categoryName}
-              id={index}
-              key={current.categoryName}
-            >
+            <AccordionItem title={current.categoryName} id={index} key={index}>
               {curiosities[index].options.map((currentOption) => (
-                <AccordionBody>
+                <AccordionBody key={currentOption.id}>
                   <Styles.SubTitle>{currentOption.answer}</Styles.SubTitle>
                 </AccordionBody>
               ))}
